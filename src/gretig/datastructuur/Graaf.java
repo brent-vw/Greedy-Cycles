@@ -15,7 +15,7 @@ public class Graaf {
         this.size = size;
         toppen = new Top[size];
         bogen = new Boog[3*size-6];
-        current=0;
+        current=-1;
     }
 
     public void init_next() throws IOException {

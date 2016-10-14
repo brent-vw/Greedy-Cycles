@@ -13,16 +13,13 @@ public class Dominantie {
     public static void main(String[] args) {
         try (InputStream is = System.in) {
             int b;
-            int bytesize=0;
             String header="";
             while ((b = is.read()) != -1) {
                 header += ((char) b);
-                if(!header.equals(">>SEC<<")&&header.length()<7) {
-		//TODO
-		} else if(header.length()>7) {
+                if(header.equals(">>SEC<<")) {
+		            break;
+	        	} else if(header.length()>7) {
                     throw new IOException("Wrong Header");
-                } else {
-                    break;
                 }
             }
             GraafDecoder g = new GraafDecoder(is);

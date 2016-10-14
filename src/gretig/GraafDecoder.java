@@ -22,7 +22,10 @@ public class GraafDecoder {
         int b;
         ArrayList<Graaf> gf = new ArrayList<>();
         while(!done){
-            gf.add(decodeGraaf(is.read(),is.read()));
+            int bytesize = is.read();
+            int toppen = is.read();
+            if(bytesize==-1||toppen==-1) break;
+            gf.add(decodeGraaf(bytesize, toppen));
         }
         return gf;
     }
@@ -35,10 +38,9 @@ public class GraafDecoder {
         Graaf g = new Graaf(toppen);
         g.init_next();
         while(((b=is.read())!=-1)){
-            System.out.println(toppen);
             if(b==0) {
                 teller++;
-                if(teller>=toppen-1) break;
+                if(teller>=toppen) break;
                 g.init_next();
 
             }

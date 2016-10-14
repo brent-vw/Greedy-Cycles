@@ -14,6 +14,7 @@ public class Boog {
     }
 
     public void addBoog(Top t2){
+        this.t2=t2;
         t1.addBuur(t2);
         t2.addBuur(t1);
     }
