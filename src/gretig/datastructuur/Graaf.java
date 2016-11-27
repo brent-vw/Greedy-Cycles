@@ -155,9 +155,10 @@ public class Graaf {
         Top[] t = sortToppen();
         Top[] rev = new Top[t.length];
         boolean found = false;
-        for(int i=0;i<t.length;i++){
+        /*for(int i=0;i<t.length;i++){
             rev[i]=t[t.length-i-1];
-        }
+        }*/
+        rev = t;
         String out = "";
         HashSet<Top> added = new HashSet<>(tops);
         Top root = rev[0];
@@ -190,4 +191,7 @@ public class Graaf {
         }
     }
 
+    boolean isBiconnected(HashSet<Top> vertices, HashSet<Top> graaf){
+        return false;
+    }
 }
