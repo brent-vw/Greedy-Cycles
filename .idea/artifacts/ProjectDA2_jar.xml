@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="ProjectDA2:jar">
-    <output-path>$PROJECT_DIR$/ProjectDA2_jar</output-path>
-    <root id="archive" name="ProjectDA2.jar">
-      <element id="module-output" name="ProjectDA2" />
-    </root>
-  </artifact>
-</component>
